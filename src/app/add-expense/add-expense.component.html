@@ -1,0 +1,72 @@
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-8">
+    <div class="card mb-3">
+      <div class="card-header">
+        <fa-icon [icon]="faExpense" size="lg"></fa-icon>
+        <fa-icon [icon]="faPlus" size="sm"></fa-icon>
+        <span class="pl-2">Add expense</span>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onAddExpense(f)" #f="ngForm">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description">
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" class="form-control" id="amount">
+          </div>
+          <div class="form-group">
+            <div class="form-check form-check-inline mr-5">
+              <input [(ngModel)]="share" name="share" class="form-check-input" type="radio" id="share-with-friend" value="friend">
+              <label class="form-check-label" for="share-with-friend">Share with you and (friend)</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input [(ngModel)]="share" name="share"
+                  class="form-check-input" type="radio" id="share-with-group" value="group">
+              <label class="form-check-label" for="share-with-group">Share with group</label>
+            </div>
+          </div>
+          <div class="form-group" *ngIf="share === 'friend'">
+            <select class="custom-select">
+              <option selected>select friend</option>
+              <option value="jon">John Doy</option>
+              <option value="jons">John Smith</option>
+              <option value="ben">ben Johnson</option>
+            </select>
+          </div>
+          <div class="form-group" *ngIf="share === 'group'">
+            <select class="custom-select">
+              <option selected>select group</option>
+              <option value="jon">Three musketeers</option>
+              <option value="jons">Koala brothers</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <div>
+              <label for="group-type">Expense type</label>
+            </div>
+            <div class="btn-group btn-group-toggle radio-pills" data-toggle="buttons">
+              <label class="btn btn-outline-dark">
+                <input type="radio" name="options" id="option1"><fa-icon [icon]="faTrip"></fa-icon> Trip
+              </label>
+              <label class="btn btn-outline-dark">
+                <input type="radio" name="options" id="option2"> <fa-icon [icon]="faHome"></fa-icon> Home
+              </label>
+              <label class="btn btn-outline-dark">
+                <input type="radio" name="options" id="option3"> <fa-icon [icon]="faCouple"></fa-icon> Couple
+              </label>
+              <label class="btn btn-outline-dark">
+                <input type="radio" name="options" id="option3"> <fa-icon [icon]="faUtensils"></fa-icon> Dinner
+              </label>
+              <label class="btn btn-outline-dark">
+                <input type="radio" name="options" id="option3"> <fa-icon [icon]="faOther"></fa-icon> Other
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

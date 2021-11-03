@@ -2,3 +2,18 @@
 body {
   padding-top: 3rem;
 }
+
+.radio-pills > label {
+  border-radius: 10rem !important;
+  margin-right: 1.5rem;
+}
+
+.select-white {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+}
+
+.bootstrap-select>.dropdown-toggle:focus {
+  outline: 0 !important;
+}
+

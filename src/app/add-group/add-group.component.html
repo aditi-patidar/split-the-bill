@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-8">
+    <div class="card mb-3">
+      <div class="card-header">
+        <fa-icon [icon]="faUsers" size="lg"></fa-icon>
+        <fa-icon [icon]="faPlus" size="xs"></fa-icon>
+        <span class="pl-2">Create a new group</span>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="full-name">Group name</label>
+            <input type="text" class="form-control" id="full-name">
+          </div>
+          <div class="form-group">
+            <div><label for="add-friends">Add friends</label></div>
+              <select name="friends" id="add-friends" class="selectpicker form-control" multiple data-style="select-white">
+                <option value="Jon">Jon Doy</option>
+                <option value="Bob">Bob Gray</option>
+                <option value="Elina">Elina Parkar</option>
+                <option value="ben">Ben Gibbons</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <div>
+              <label for="group-type">Group type</label>
+            </div>
+            <div class="btn-group btn-group-toggle radio-pills" data-toggle="buttons">
+              <label class="btn btn-outline-dark">
+                <input type="radio" name="options" id="option1"><fa-icon [icon]="faTrip"></fa-icon> Trip
+              </label>
+              <label class="btn btn-outline-dark">
+                <input type="radio" name="options" id="option2"> <fa-icon [icon]="faHome"></fa-icon> Home
+              </label>
+              <label class="btn btn-outline-dark">
+                <input type="radio" name="options" id="option3"> <fa-icon [icon]="faDinner"></fa-icon> Dinner
+              </label>
+              <label class="btn btn-outline-dark">
+                <input type="radio" name="options" id="option3"> <fa-icon [icon]="faOther"></fa-icon> Other
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

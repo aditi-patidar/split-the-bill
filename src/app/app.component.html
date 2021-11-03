@@ -9,21 +9,31 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="container">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Groups
-              <span class="ml-2"><fa-icon [icon]="faUsers"></fa-icon></span>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="groups" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">Groups
+              <span class="ml-2"><fa-icon [icon]="faUsers" size="lg"></fa-icon></span>
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Friends
+            <a class="nav-link" routerLink="friends" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">Friends
               <span class="ml-2"> <fa-icon [icon]="faUser"></fa-icon></span>
               <span class="sr-only"></span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Activity
-              <span class="ml-2"> <fa-icon [icon]="faChartLine"></fa-icon> </span>
+            <a class="nav-link" routerLink="activities" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">Activity
+              <span class="ml-2"> <fa-icon [icon]="faChartLine" size="lg"></fa-icon> </span>
+              <span class="sr-only"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="add-expense" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"> Add expense
+              <span class="ml-2"> <fa-icon [icon]="faExpense" size="lg"></fa-icon> </span>
               <span class="sr-only"></span>
             </a>
           </li>
@@ -34,10 +44,10 @@
               Account <span class="ml-2"> <fa-icon [icon]="faUserCircle" size="lg"></fa-icon> </span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" routerLink="sign-up">Sign up</a></li>
+              <li><a class="dropdown-item" routerLink="sign-in">Sign in</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Log out</a></li>
             </ul>
           </li>
         </ul>

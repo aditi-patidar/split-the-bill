@@ -1,0 +1,21 @@
+<div class="row justify-content-center">
+  <div class="col-md-4 col-lg-4">
+    <button type="button" class="btn btn-outline-primary btn-lg btn-block" routerLink="/add-group">
+      <fa-icon [icon]="faUsers" size="lg"></fa-icon>
+      <fa-icon [icon]="faPlus" size="xs"></fa-icon>
+      <span class="pl-2">Create a new group</span>
+    </button>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-8">
+    <div class="list-group mt-4">
+      <a [routerLink]="['/group-view', 10]" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Las Vegas trip</h5>
+          You are owed $250
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

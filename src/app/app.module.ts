@@ -9,6 +9,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FriendsComponent } from './friends/friends.component';
+import { GroupsComponent } from './groups/groups.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { AddFriendComponent } from './add-friend/add-friend.component';
+import { AddGroupComponent } from './add-group/add-group.component';
+import { AddExpenseComponent } from './add-expense/add-expense.component';
+import { FormsModule } from '@angular/forms';
+import { GroupViewComponent } from './group-view/group-view.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +24,21 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SignUpComponent,
     PageNotFoundComponent,
     HomeComponent,
-    SignInComponent
+    SignInComponent,
+    FriendsComponent,
+    GroupsComponent,
+    ActivitiesComponent,
+    AddFriendComponent,
+    AddGroupComponent,
+    AddExpenseComponent,
+    GroupViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
