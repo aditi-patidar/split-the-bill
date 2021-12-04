@@ -1,7 +1,6 @@
-
 <header>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">ShareBucks</a>
+    <a class="navbar-brand" href="#">SplitBill</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,9 +9,16 @@
       <div class="container">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" routerLink="groups" routerLinkActive="active"
+            <!-- <a class="nav-link" routerLink="groups" routerLinkActive="active"
                 [routerLinkActiveOptions]="{exact: true}">Groups
               <span class="ml-2"><fa-icon [icon]="faUsers" size="lg"></fa-icon></span>
+              <span class="sr-only">(current)</span>
+            </a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="expenses" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">Expenses
+              <span class="ml-2"><fa-icon [icon]="faExpense" size="lg"></fa-icon></span>
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -39,9 +45,12 @@
           </li>
         </ul>
         <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link">Overall, you are owed $1000</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-              Account <span class="ml-2"> <fa-icon [icon]="faUserCircle" size="lg"></fa-icon> </span>
+              <fa-icon [icon]="faUserCircle" size="lg"></fa-icon>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
               <li><a class="dropdown-item" routerLink="sign-up">Sign up</a></li>
